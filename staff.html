@@ -11,7 +11,10 @@
 body{margin:0}
 .stf-r{position:absolute;opacity:0;pointer-events:none}
 .stf-p{display:none}
-.stf-tabs label{cursor:pointer;transition:background .2s,border-color .2s}
+@media(max-width:480px){.stf-bio{font-size:15px!important}}
+.stf-tabs{scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.stf-tabs::-webkit-scrollbar{display:none}
+.stf-tabs label{flex:none;white-space:nowrap;cursor:pointer;transition:background .2s,border-color .2s}
 .stf-tabs label:hover{border-color:#8FE3F2}
 @keyframes stfin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.stf-p{animation:none!important}}
@@ -31,28 +34,32 @@ body{margin:0}
 #st5:checked~.stf-tabs label[for=st5]{background:#8FE3F2;color:#0D0A14;border-color:#8FE3F2}
 #st5:focus-visible~.stf-tabs label[for=st5]{outline:2px solid #F6F3FA;outline-offset:3px}
 a{color:#8FE3F2}a:hover{color:#F6F3FA}
-p,div{text-wrap:pretty;word-break:auto-phrase}
+p,div,a,span{text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
 h1,h2{text-wrap:balance}
 .nb{display:inline-block}
+.hd-nav{max-width:100%}
+@media(max-width:640px){.hd{padding:6px 10px!important;justify-content:center!important}.hd-logo{display:none!important}.hd-nav{flex-wrap:nowrap!important;gap:0!important;width:100%;justify-content:space-between;overflow-x:auto}.hd-a{padding:0 7px!important;font-size:13px!important;min-height:44px!important;white-space:nowrap}}
 </style>
 </head>
 <body>
-<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:hidden">
+<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:clip">
 
   <!-- header -->
-  <div style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <a href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
+  <div style="position:sticky;top:0;z-index:100;background:rgba(13,10,20,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #2F2640">
+  <div class="hd" style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+    <a class="hd-logo" href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
       <span aria-hidden="true" style="display:flex;align-items:center;gap:1px;font-family:'Dela Gothic One',sans-serif;font-size:34px;line-height:1">4<svg style="width:0.9em;height:0.98em" viewBox="0 0 48 52"><path d="M5 22C5 4 43 4 43 22Z" fill="#8FE3F2"></path><ellipse cx="17" cy="14" rx="2.2" ry="1.2" transform="rotate(-20 17 14)" fill="#0D0A14"></ellipse><ellipse cx="25" cy="10.5" rx="2.2" ry="1.2" fill="#0D0A14"></ellipse><ellipse cx="32" cy="15" rx="2.2" ry="1.2" transform="rotate(20 32 15)" fill="#0D0A14"></ellipse><path d="M3 25Q8 21 13 25T23 25T33 25T45 25V29H3Z" fill="#C77DE0"></path><rect x="4" y="31" width="40" height="8" rx="4" fill="#F6F3FA"></rect><path d="M5 42H43C43 49 38 50 24 50C10 50 5 49 5 42Z" fill="#8FE3F2"></path></svg>4</span>
       <span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Dela Gothic One',sans-serif;font-size:15px;letter-spacing:0.12em;line-height:1">BURGERSHOP</span><span style="font-size:10px;letter-spacing:0.28em;color:#8FE3F2;font-weight:700;line-height:1">BURGER FOUND</span></span>
     </a>
-    <div style="display:flex;flex-wrap:wrap;gap:8px">
-      <a href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">TOP</a>
-      <a href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
-      <a href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">STAFF</a>
-      <a href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
-      <a href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">PHOTO</a>
-      <a href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
+    <div class="hd-nav" style="display:flex;flex-wrap:wrap;gap:8px">
+      <a class="hd-a" href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">TOP</a>
+      <a class="hd-a" href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
+      <a class="hd-a" href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">STAFF</a>
+      <a class="hd-a" href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
+      <a class="hd-a" href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">PHOTO</a>
+      <a class="hd-a" href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
     </div>
+  </div>
   </div>
 
   <!-- title + switcher -->
@@ -60,9 +67,9 @@ h1,h2{text-wrap:balance}
   <input class="stf-r" type="radio" name="stf" id="st1" aria-label="あるえす" checked=""><input class="stf-r" type="radio" name="stf" id="st2" aria-label="はのん"><input class="stf-r" type="radio" name="stf" id="st3" aria-label="あさり"><input class="stf-r" type="radio" name="stf" id="st4" aria-label="うゆは"><input class="stf-r" type="radio" name="stf" id="st5" aria-label="かなたん">
   <div style="max-width:1200px;margin:0 auto;padding:56px 24px 28px;box-sizing:border-box">
     <div style="font-size:14px;letter-spacing:0.3em;color:#C77DE0;font-weight:700;margin-bottom:12px">STAFF</div>
-    <h1 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.1">今夜のカウンターに立つ、みんな。</h1>
+    <h1 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.1">今夜の<wbr>カウンターに<wbr>立つ、<wbr>みんな。</h1>
   </div>
-  <div class="stf-tabs" style="max-width:1200px;margin:0 auto;padding:0 24px 40px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:12px">
+  <div class="stf-tabs" style="max-width:1200px;margin:0 auto;padding:0 24px 40px;box-sizing:border-box;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px">
       <label for="st1" style="box-sizing:border-box;min-height:64px;padding:6px 20px 6px 6px;display:flex;align-items:center;gap:12px;background:#17121F;border:2px solid #2F2640;border-radius:999px;color:inherit;font-weight:700;font-size:16px"><img src="images/6632619a.webp" alt="" style="width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:50% 25%;display:block">あるえす</label>
       <label for="st2" style="box-sizing:border-box;min-height:64px;padding:6px 20px 6px 6px;display:flex;align-items:center;gap:12px;background:#17121F;border:2px solid #2F2640;border-radius:999px;color:inherit;font-weight:700;font-size:16px"><img src="images/26416f36.webp" alt="" style="width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:50% 25%;display:block">はのん</label>
       <label for="st3" style="box-sizing:border-box;min-height:64px;padding:6px 20px 6px 6px;display:flex;align-items:center;gap:12px;background:#17121F;border:2px solid #2F2640;border-radius:999px;color:inherit;font-weight:700;font-size:16px"><img src="images/7cbe19ca.webp" alt="" style="width:50px;height:50px;border-radius:50%;object-fit:cover;object-position:50% 25%;display:block">あさり</label>
@@ -82,14 +89,14 @@ h1,h2{text-wrap:balance}
           <div style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(48px,7vw,72px);line-height:1.1">あるえす</div>
           <div style="font-size:20px;letter-spacing:0.2em;color:#8FE3F2;font-weight:700">RS / SHINANO</div>
         </div>
-        <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4"><span class="nb">「いらっしゃいませ！</span><span class="nb">　名札の星が</span><span class="nb">目印です。</span><span class="nb">今夜のおすすめ、</span><span class="nb">こっそり教えちゃいます。」</span><br><span class="nb">ちょっとシャイだけど、</span><span class="nb">注文のときは</span><span class="nb">いつも笑顔で</span><span class="nb">迎えてくれます。</span></p>
+        <p class="stf-bio" style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4">「いらっしゃいませ！　<wbr>名札の<wbr>星が<wbr>目印です。<wbr>今夜の<wbr>おすすめ、<wbr>こっそり<wbr>教えちゃいます。」<br>ちょっと<wbr>シャイだけど、<wbr>注文のときはいつも<wbr>笑顔で<wbr>迎えてくれます。</p>
         <div style="background:#17121F;border:2px solid #F6F3FA;border-radius:20px;overflow:hidden">
           <div style="height:20px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/20px 20px"></div>
           <div style="padding:8px 28px 12px">
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">カウンター / 接客</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きなメニュー</div><div style="flex:1;min-width:0;line-height:1.7">403 フォービドゥン</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">注文を聞いて、おすすめを当てること</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 25:00〜27:00</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">カウンター <wbr>/ <wbr>接客</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きな<wbr>メニュー</div><div style="flex:1;min-width:0;line-height:1.7">403 <wbr>フォービドゥン</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">注文を<wbr>聞いて、<wbr>おすすめを<wbr>当てること</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 <wbr>25:00<wbr>〜<wbr>27:00</div></div>
           </div>
         </div>
       </div>
@@ -106,14 +113,14 @@ h1,h2{text-wrap:balance}
           <div style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(48px,7vw,72px);line-height:1.1">はのん</div>
           <div style="font-size:20px;letter-spacing:0.2em;color:#8FE3F2;font-weight:700">Hanon / YUGIRI<br></div>
         </div>
-        <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4"><span class="nb">「404ファウンド、</span><span class="nb">おすすめですよ〜！」</span><br><span class="nb">ピンクと</span><span class="nb">紺のユニフォームが</span><span class="nb">目印。</span><span class="nb">ウインクと</span><span class="nb">笑顔で</span><span class="nb">お客さんを</span><span class="nb">迎えるムードメーカーです。</span></p>
+        <p class="stf-bio" style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4">「404<wbr>ファウンド、<wbr>おすすめですよ<wbr>〜！」<br>ピンクと<wbr>紺の<wbr>ユニフォームが<wbr>目印。<wbr>ウインクと<wbr>笑顔で<wbr>お客さんを<wbr>迎える<wbr>ムードメーカーです。</p>
         <div style="background:#17121F;border:2px solid #F6F3FA;border-radius:20px;overflow:hidden">
           <div style="height:20px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/20px 20px"></div>
           <div style="padding:8px 28px 12px">
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール / 呼び込み</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きなメニュー</div><div style="flex:1;min-width:0;line-height:1.7">404 ファウンド</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">お客さんの顔を一瞬で覚えること</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 25:00〜27:00</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール <wbr>/ <wbr>呼び<wbr>込み</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きな<wbr>メニュー</div><div style="flex:1;min-width:0;line-height:1.7">404 <wbr>ファウンド</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">お客さんの<wbr>顔を<wbr>一瞬で<wbr>覚えること</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 <wbr>25:00<wbr>〜<wbr>27:00</div></div>
           </div>
         </div>
       </div>
@@ -130,14 +137,14 @@ h1,h2{text-wrap:balance}
           <div style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(48px,7vw,72px);line-height:1.1">あさり</div>
           <div style="font-size:20px;letter-spacing:0.2em;color:#C77DE0;font-weight:700">Asari / SHINANO</div>
         </div>
-        <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4"><span class="nb">「ごゆっくりどうぞ。</span><span class="nb">ご注文、</span><span class="nb">お待ちしてますね。」</span><br><span class="nb">赤のストライプのユニフォームで、</span><span class="nb">ふんわりした笑顔と</span><span class="nb">ほっとする空気を</span><span class="nb">つくります。</span></p>
+        <p class="stf-bio" style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4">「ご<wbr>ゆっくりどうぞ。<wbr>ご注文、<wbr>お待ちしてますね。」<br>赤の<wbr>ストライプの<wbr>ユニフォームで、<wbr>ふんわりした<wbr>笑顔とほっとする<wbr>空気をつくります。</p>
         <div style="background:#17121F;border:2px solid #F6F3FA;border-radius:20px;overflow:hidden">
           <div style="height:20px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/20px 20px"></div>
           <div style="padding:8px 28px 12px">
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール / ドリンク</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きなメニュー</div><div style="flex:1;min-width:0;line-height:1.7">リロード・チェリーコーラ</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">ドリンクをおいしく注ぐこと</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 25:00〜27:00</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール <wbr>/ <wbr>ドリンク</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きな<wbr>メニュー</div><div style="flex:1;min-width:0;line-height:1.7">リロード・チェリーコーラ</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">ドリンクをおいしく<wbr>注ぐこと</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 <wbr>25:00<wbr>〜<wbr>27:00</div></div>
           </div>
         </div>
       </div>
@@ -154,14 +161,14 @@ h1,h2{text-wrap:balance}
           <div style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(48px,7vw,72px);line-height:1.1">うゆは</div>
           <div style="font-size:20px;letter-spacing:0.2em;color:#C77DE0;font-weight:700">Uyuha / SHINANO<br></div>
         </div>
-        <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4"><span class="nb">「いらっしゃいませ。</span><span class="nb">ゆっくりしていって</span><span class="nb">ね。」</span><br><span class="nb">黒ストライプのジャケットに</span><span class="nb">チェッカーのリボン。</span><span class="nb">物静かに、</span><span class="nb">夜のカウンターを</span><span class="nb">引き締めます。</span></p>
+        <p class="stf-bio" style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4">「いらっしゃいませ。<wbr>ゆっくりしていってね。」<br>黒<wbr>ストライプの<wbr>ジャケットに<wbr>チェッカーの<wbr>リボン。<wbr>物静かに、<wbr>夜の<wbr>カウンターを<wbr>引き締めます。</p>
         <div style="background:#17121F;border:2px solid #F6F3FA;border-radius:20px;overflow:hidden">
           <div style="height:20px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/20px 20px"></div>
           <div style="padding:8px 28px 12px">
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">キッチン / 接客</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きなメニュー</div><div style="flex:1;min-width:0;line-height:1.7">418 アイム・ア・チキン</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">静かな夜に似合う、落ち着いた接客</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 25:00〜27:00</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">キッチン <wbr>/ <wbr>接客</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きな<wbr>メニュー</div><div style="flex:1;min-width:0;line-height:1.7">418 <wbr>アイム・ア・チキン</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">静かな<wbr>夜に<wbr>似合う、<wbr>落ち<wbr>着いた<wbr>接客</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 <wbr>25:00<wbr>〜<wbr>27:00</div></div>
           </div>
         </div>
       </div>
@@ -178,14 +185,14 @@ h1,h2{text-wrap:balance}
           <div style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(48px,7vw,72px);line-height:1.1">かなたん</div>
           <div style="font-size:20px;letter-spacing:0.2em;color:#8FE3F2;font-weight:700">Kanatan / AIRI</div>
         </div>
-        <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4"><span class="nb">「はいっ、</span><span class="nb">ただいま！</span><span class="nb">　がんばります！」</span><br><span class="nb">黄色のユニフォームの元気いっぱいな研修生。</span><span class="nb">名札に</span><span class="nb">は</span><span class="nb">「TRAINEE」</span><span class="nb">の文字が</span><span class="nb">あります。</span></p>
+        <p class="stf-bio" style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4">「はいっ、<wbr>ただいま！　<wbr>がんばります！」<br>黄色の<wbr>ユニフォームの<wbr>元気<wbr>いっぱいな<wbr>研修生。<wbr>名札には<wbr>「TRAINEE」の<wbr>文字があります。</p>
         <div style="background:#17121F;border:2px solid #F6F3FA;border-radius:20px;overflow:hidden">
           <div style="height:20px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/20px 20px"></div>
           <div style="padding:8px 28px 12px">
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール / 研修中</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きなメニュー</div><div style="flex:1;min-width:0;line-height:1.7">200 OK チーズ</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">元気なあいさつと、指さし確認</div></div>
-            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 25:00〜27:00</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">担当</div><div style="flex:1;min-width:0;line-height:1.7">ホール <wbr>/ <wbr>研修中</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">好きな<wbr>メニュー</div><div style="flex:1;min-width:0;line-height:1.7">200 <wbr>OK <wbr>チーズ</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #2F2640"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">得意なこと</div><div style="flex:1;min-width:0;line-height:1.7">元気な<wbr>あいさつと、<wbr>指さし<wbr>確認</div></div>
+            <div style="display:flex;gap:20px;padding:16px 0"><div style="flex:0 0 7em;color:#8FE3F2;font-weight:700">シフト</div><div style="flex:1;min-width:0;line-height:1.7">毎日 <wbr>25:00<wbr>〜<wbr>27:00</div></div>
           </div>
         </div>
       </div>
@@ -196,28 +203,28 @@ h1,h2{text-wrap:balance}
   <!-- uniform -->
   <div style="max-width:1200px;margin:0 auto;padding:0 24px 88px;box-sizing:border-box">
     <div style="font-size:14px;letter-spacing:0.3em;color:#C77DE0;font-weight:700;margin-bottom:12px">UNIFORM</div>
-    <h2 style="margin:0 0 14px;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:36px">ユニフォームのこだわり</h2>
-    <div style="margin:0 0 36px;font-size:16px;color:#B9B0C7">衣装：<a href="credit.html" style="font-weight:700;text-decoration:none">CANDY POP DINER</a> / てんぱすおおもり</div>
+    <h2 style="margin:0 0 14px;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:36px">ユニフォームの<wbr>こだわり</h2>
+    <div style="margin:0 0 36px;font-size:16px;color:#B9B0C7">衣装：<a href="credit.html" style="font-weight:700;text-decoration:none">CANDY POP DINER</a> <wbr>/ <wbr>てんぱす<wbr>おおもり</div>
     <div style="display:flex;flex-wrap:wrap;gap:20px">
       <div style="flex:1 1 240px;min-width:0;box-sizing:border-box;padding:28px;background:#17121F;border:1px solid #2F2640;border-radius:20px;display:flex;flex-direction:column;gap:10px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:32px;color:#8FE3F2">01</div>
         <div style="font-size:20px;font-weight:700">ストライプジャケット</div>
-        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">白い大きな襟と細いストライプが、全員おそろいの目印。夜の店内でもシルエットがはっきり見えます。</div>
+        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">白い<wbr>大きな<wbr>襟と<wbr>細い<wbr>ストライプが、<wbr>全員<wbr>おそろいの<wbr>目印。<wbr>夜の<wbr>店内でも<wbr>シルエットが<wbr>はっきり<wbr>見えます。</div>
       </div>
       <div style="flex:1 1 240px;min-width:0;box-sizing:border-box;padding:28px;background:#17121F;border:1px solid #2F2640;border-radius:20px;display:flex;flex-direction:column;gap:10px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:32px;color:#C77DE0">02</div>
-        <div style="font-size:20px;font-weight:700">星とチェッカーの名札</div>
-        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">スタッフ全員がつけるIDカード。星とチェッカー柄があしらわれた、お店の目印です。</div>
+        <div style="font-size:20px;font-weight:700">星と<wbr>チェッカーの<wbr>名札</div>
+        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">スタッフ<wbr>全員がつける<wbr>ID<wbr>カード。<wbr>星と<wbr>チェッカー<wbr>柄があしらわれた、<wbr>お店の<wbr>目印です。</div>
       </div>
       <div style="flex:1 1 240px;min-width:0;box-sizing:border-box;padding:28px;background:#17121F;border:1px solid #2F2640;border-radius:20px;display:flex;flex-direction:column;gap:10px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:32px;color:#F6F3FA">03</div>
-        <div style="font-size:20px;font-weight:700">チェーンのバイザーハット</div>
-        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">フリルつきのバイザーに、チェーンとさくらんぼの飾り。頭の上でいちばん目をひく、お店の顔です。</div>
+        <div style="font-size:20px;font-weight:700">チェーンの<wbr>バイザーハット</div>
+        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">フリルつきの<wbr>バイザーに、<wbr>チェーンと<wbr>さくらんぼの<wbr>飾り。<wbr>頭の<wbr>上で<wbr>いちばん<wbr>目をひく、<wbr>お店の<wbr>顔です。</div>
       </div>
       <div style="flex:1 1 240px;min-width:0;box-sizing:border-box;padding:28px;background:#17121F;border:1px solid #2F2640;border-radius:20px;display:flex;flex-direction:column;gap:10px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:32px;color:#8FE3F2">04</div>
-        <div style="font-size:20px;font-weight:700">レコードのバッグとグローブ</div>
-        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">腰にはレコード型のバッグ。指先の出るグローブと合わせて、動きやすさも抜群です。</div>
+        <div style="font-size:20px;font-weight:700">レコードの<wbr>バッグと<wbr>グローブ</div>
+        <div style="font-size:15px;line-height:1.8;color:#B9B0C7">腰には<wbr>レコード<wbr>型の<wbr>バッグ。<wbr>指先の<wbr>出る<wbr>グローブと<wbr>合わせて、<wbr>動きやすさも<wbr>抜群です。</div>
       </div>
     </div>
   </div>
@@ -226,10 +233,10 @@ h1,h2{text-wrap:balance}
   <div style="max-width:1200px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box">
     <div style="border:2px dashed #C77DE0;border-radius:24px;padding:40px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
       <div style="flex:1 1 360px;min-width:0">
-        <div style="font-family:'Dela Gothic One',sans-serif;font-size:28px;margin-bottom:10px">STAFF募集中</div>
-        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">星の名札をつけて、一緒にカウンターに立ってくれる仲間を探しています。<br>応募は<a href="https://x.com/RS_LMX_ultra">あるえすのX（@RS_LMX_ultra）</a>まで。</div>
+        <div style="font-family:'Dela Gothic One',sans-serif;font-size:28px;margin-bottom:10px">STAFF<wbr>募集中</div>
+        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">星の<wbr>名札をつけて、<wbr>一緒に<wbr>カウンターに<wbr>立ってくれる<wbr>仲間を<wbr>探しています。<br>応募は<a href="https://x.com/RS_LMX_ultra">あるえすの<wbr>X<wbr>（@RS_LMX_ultra）</a>まで。</div>
       </div>
-      <div style="font-size:14px;color:#B9B0C7">※ このお店は実在しません</div>
+      <div style="font-size:14px;color:#B9B0C7">※ <wbr>この<wbr>お店は<wbr>実在しません</div>
     </div>
   </div>
 
@@ -237,7 +244,7 @@ h1,h2{text-wrap:balance}
   <div style="height:16px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/16px 16px"></div>
   <div style="max-width:1200px;margin:0 auto;padding:20px 24px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:#B9B0C7;font-size:14px">
     <div style="font-family:'Dela Gothic One',sans-serif;color:#F6F3FA;font-size:16px">BURGERSHOP 404</div>
-    <div>© BURGERSHOP 404 — 架空のハンバーガーショップです</div>
+    <div>© <wbr>BURGERSHOP <wbr>404 <wbr>— <wbr>架空の<wbr>ハンバーガーショップです</div>
   </div>
 </div>
 </body>

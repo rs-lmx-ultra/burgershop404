@@ -40,35 +40,39 @@ body{margin:0}
 #ph8:checked~.ph-thumbs label[for=ph8]{border-color:#8FE3F2;opacity:1}
 #ph8:focus-visible~.ph-thumbs label[for=ph8]{outline:2px solid #F6F3FA;outline-offset:2px}
 a{color:#8FE3F2}a:hover{color:#F6F3FA}
-p,div{text-wrap:pretty;word-break:auto-phrase}
+p,div,a,span{text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
 h1,h2{text-wrap:balance}
 .nb{display:inline-block}
+.hd-nav{max-width:100%}
+@media(max-width:640px){.hd{padding:6px 10px!important;justify-content:center!important}.hd-logo{display:none!important}.hd-nav{flex-wrap:nowrap!important;gap:0!important;width:100%;justify-content:space-between;overflow-x:auto}.hd-a{padding:0 7px!important;font-size:13px!important;min-height:44px!important;white-space:nowrap}}
 </style>
 </head>
 <body>
-<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:hidden">
+<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:clip">
 
   <!-- header -->
-  <div style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <a href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
+  <div style="position:sticky;top:0;z-index:100;background:rgba(13,10,20,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #2F2640">
+  <div class="hd" style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+    <a class="hd-logo" href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
       <span aria-hidden="true" style="display:flex;align-items:center;gap:1px;font-family:'Dela Gothic One',sans-serif;font-size:34px;line-height:1">4<svg style="width:0.9em;height:0.98em" viewBox="0 0 48 52"><path d="M5 22C5 4 43 4 43 22Z" fill="#8FE3F2"></path><ellipse cx="17" cy="14" rx="2.2" ry="1.2" transform="rotate(-20 17 14)" fill="#0D0A14"></ellipse><ellipse cx="25" cy="10.5" rx="2.2" ry="1.2" fill="#0D0A14"></ellipse><ellipse cx="32" cy="15" rx="2.2" ry="1.2" transform="rotate(20 32 15)" fill="#0D0A14"></ellipse><path d="M3 25Q8 21 13 25T23 25T33 25T45 25V29H3Z" fill="#C77DE0"></path><rect x="4" y="31" width="40" height="8" rx="4" fill="#F6F3FA"></rect><path d="M5 42H43C43 49 38 50 24 50C10 50 5 49 5 42Z" fill="#8FE3F2"></path></svg>4</span>
       <span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Dela Gothic One',sans-serif;font-size:15px;letter-spacing:0.12em;line-height:1">BURGERSHOP</span><span style="font-size:10px;letter-spacing:0.28em;color:#8FE3F2;font-weight:700;line-height:1">BURGER FOUND</span></span>
     </a>
-    <div style="display:flex;flex-wrap:wrap;gap:8px">
-      <a href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">TOP</a>
-      <a href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
-      <a href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">STAFF</a>
-      <a href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
-      <a href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">PHOTO</a>
-      <a href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
+    <div class="hd-nav" style="display:flex;flex-wrap:wrap;gap:8px">
+      <a class="hd-a" href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">TOP</a>
+      <a class="hd-a" href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
+      <a class="hd-a" href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">STAFF</a>
+      <a class="hd-a" href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
+      <a class="hd-a" href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">PHOTO</a>
+      <a class="hd-a" href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
     </div>
+  </div>
   </div>
 
   <!-- title -->
   <div style="max-width:1200px;margin:0 auto;padding:56px 24px 48px;box-sizing:border-box">
     <div style="font-size:14px;letter-spacing:0.3em;color:#C77DE0;font-weight:700;margin-bottom:12px">PHOTO</div>
-    <h1 style="margin:0 0 20px;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.1">夜のカウンターで、パシャリ。</h1>
-    <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4;max-width:none">Moon Diner で撮った、スタッフのスナップ集。<br>下の写真を選ぶと、上に大きく表示されます。</p>
+    <h1 style="margin:0 0 20px;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.1">夜の<wbr>カウンターで、<wbr>パシャリ。</h1>
+    <p style="margin:0;font-size:18px;line-height:1.9;color:#D8D0E4;max-width:none">Moon <wbr>Diner <wbr>で<wbr>撮った、<wbr>スタッフの<wbr>スナップ<wbr>集。<br>下の<wbr>写真を<wbr>選ぶと、<wbr>上に<wbr>大きく<wbr>表示されます。</p>
   </div>
 
   <!-- gallery -->
@@ -81,8 +85,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/6b8ba91d.webp" alt="カウンターの前に5人のスタッフが並んでポーズをとっている" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">01</span><span style="font-size:18px;font-weight:700">カウンター前で集合</span></div>
-          <a href="images/6b8ba91d.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">01</span><span style="font-size:18px;font-weight:700">カウンター<wbr>前で<wbr>集合</span></div>
+          <a href="images/6b8ba91d.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v2">
@@ -91,8 +95,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/02d37292.webp" alt="5人のスタッフが寄り添って自撮りをしている" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">02</span><span style="font-size:18px;font-weight:700">5人で自撮り</span></div>
-          <a href="images/02d37292.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">02</span><span style="font-size:18px;font-weight:700">5<wbr>人で<wbr>自撮り</span></div>
+          <a href="images/02d37292.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v3">
@@ -101,8 +105,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/25041c9f.webp" alt="ボックス席でバーガーとシェイクを囲む5人のスタッフ" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">03</span><span style="font-size:18px;font-weight:700">ボックス席でバーガーと一緒に</span></div>
-          <a href="images/25041c9f.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">03</span><span style="font-size:18px;font-weight:700">ボックス<wbr>席で<wbr>バーガーと<wbr>一緒に</span></div>
+          <a href="images/25041c9f.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v4">
@@ -111,8 +115,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/4b02568b.webp" alt="店内の壁にたくさんの写真が貼られている" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">04</span><span style="font-size:18px;font-weight:700">思い出の壁</span></div>
-          <a href="images/4b02568b.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">04</span><span style="font-size:18px;font-weight:700">思い出の<wbr>壁</span></div>
+          <a href="images/4b02568b.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v5">
@@ -121,8 +125,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/a426c383.webp" alt="ピンクのユニフォームの店員が、カウンター席の隣で微笑んでいる" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">05</span><span style="font-size:18px;font-weight:700">席でひと休み</span></div>
-          <a href="images/a426c383.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">05</span><span style="font-size:18px;font-weight:700">席で<wbr>ひと休み</span></div>
+          <a href="images/a426c383.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v6">
@@ -131,8 +135,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/26e255a7.webp" alt="赤いユニフォームの店員が、遠くを見つめている" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">06</span><span style="font-size:18px;font-weight:700">ちょっと物思い</span></div>
-          <a href="images/26e255a7.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">06</span><span style="font-size:18px;font-weight:700">ちょっと<wbr>物思い</span></div>
+          <a href="images/26e255a7.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v7">
@@ -141,8 +145,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/0a6759c6.webp" alt="ボックス席に座って、ほおづえをつく白髪の店員" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">07</span><span style="font-size:18px;font-weight:700">ボックス席で、ほおづえ</span></div>
-          <a href="images/0a6759c6.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">07</span><span style="font-size:18px;font-weight:700">ボックス<wbr>席で、<wbr>ほおづえ</span></div>
+          <a href="images/0a6759c6.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
       <div class="ph-v v8">
@@ -151,8 +155,8 @@ h1,h2{text-wrap:balance}
           <div style="display:flex;justify-content:center;background:#0D0A14"><img src="images/3fd1bb99.webp" alt="黄色いユニフォームの店員が、ハットに手を添えて座っている" style="display:block;width:100%;aspect-ratio:16/9;object-fit:contain"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 4px 0">
-          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">08</span><span style="font-size:18px;font-weight:700">ハットを直して、ひと息</span></div>
-          <a href="images/3fd1bb99.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で開く ↗</a>
+          <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-family:'Dela Gothic One',sans-serif;font-size:26px;color:#8FE3F2">08</span><span style="font-size:18px;font-weight:700">ハットを<wbr>直して、<wbr>ひと息</span></div>
+          <a href="images/3fd1bb99.webp" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700;text-decoration:none;font-size:15px">原寸で<wbr>開く <wbr>↗</a>
         </div>
       </div>
     </div>
@@ -172,7 +176,7 @@ h1,h2{text-wrap:balance}
   <div style="height:16px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/16px 16px"></div>
   <div style="max-width:1200px;margin:0 auto;padding:20px 24px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:#B9B0C7;font-size:14px">
     <div style="font-family:'Dela Gothic One',sans-serif;color:#F6F3FA;font-size:16px">BURGERSHOP 404</div>
-    <div>© BURGERSHOP 404 — 架空のハンバーガーショップです</div>
+    <div>© <wbr>BURGERSHOP <wbr>404 <wbr>— <wbr>架空の<wbr>ハンバーガーショップです</div>
   </div>
 </div>
 </body>

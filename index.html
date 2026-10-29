@@ -10,28 +10,32 @@
 <style>
 body{margin:0}
 a{color:#8FE3F2}a:hover{color:#F6F3FA}
-p,div{text-wrap:pretty;word-break:auto-phrase}
+p,div,a,span{text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
 h1,h2{text-wrap:balance}
 .nb{display:inline-block}
+.hd-nav{max-width:100%}
+@media(max-width:640px){.hd{padding:6px 10px!important;justify-content:center!important}.hd-logo{display:none!important}.hd-nav{flex-wrap:nowrap!important;gap:0!important;width:100%;justify-content:space-between;overflow-x:auto}.hd-a{padding:0 7px!important;font-size:13px!important;min-height:44px!important;white-space:nowrap}}
 </style>
 </head>
 <body>
-<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:hidden">
+<div style="background:#0D0A14;color:#F6F3FA;font-family:'Zen Kaku Gothic New',sans-serif;overflow:clip">
 
   <!-- header -->
-  <div style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <a href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
+  <div style="position:sticky;top:0;z-index:100;background:rgba(13,10,20,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #2F2640">
+  <div class="hd" style="max-width:1200px;margin:0 auto;padding:20px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+    <a class="hd-logo" href="index.html" aria-label="BURGERSHOP 404 トップへ" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#F6F3FA">
       <span aria-hidden="true" style="display:flex;align-items:center;gap:1px;font-family:'Dela Gothic One',sans-serif;font-size:34px;line-height:1">4<svg style="width:0.9em;height:0.98em" viewBox="0 0 48 52"><path d="M5 22C5 4 43 4 43 22Z" fill="#8FE3F2"></path><ellipse cx="17" cy="14" rx="2.2" ry="1.2" transform="rotate(-20 17 14)" fill="#0D0A14"></ellipse><ellipse cx="25" cy="10.5" rx="2.2" ry="1.2" fill="#0D0A14"></ellipse><ellipse cx="32" cy="15" rx="2.2" ry="1.2" transform="rotate(20 32 15)" fill="#0D0A14"></ellipse><path d="M3 25Q8 21 13 25T23 25T33 25T45 25V29H3Z" fill="#C77DE0"></path><rect x="4" y="31" width="40" height="8" rx="4" fill="#F6F3FA"></rect><path d="M5 42H43C43 49 38 50 24 50C10 50 5 49 5 42Z" fill="#8FE3F2"></path></svg>4</span>
       <span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Dela Gothic One',sans-serif;font-size:15px;letter-spacing:0.12em;line-height:1">BURGERSHOP</span><span style="font-size:10px;letter-spacing:0.28em;color:#8FE3F2;font-weight:700;line-height:1">BURGER FOUND</span></span>
     </a>
-    <div style="display:flex;flex-wrap:wrap;gap:8px">
-      <a href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">TOP</a>
-      <a href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
-      <a href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">STAFF</a>
-      <a href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
-      <a href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">PHOTO</a>
-      <a href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
+    <div class="hd-nav" style="display:flex;flex-wrap:wrap;gap:8px">
+      <a class="hd-a" href="index.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#0D0A14;background:#8FE3F2;border-radius:999px;font-weight:700;font-size:15px">TOP</a>
+      <a class="hd-a" href="shop.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">SHOP</a>
+      <a class="hd-a" href="staff.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">STAFF</a>
+      <a class="hd-a" href="menu.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">MENU</a>
+      <a class="hd-a" href="photo.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">PHOTO</a>
+      <a class="hd-a" href="credit.html" style="min-height:44px;padding:0 16px;display:flex;align-items:center;text-decoration:none;color:#F6F3FA;font-weight:500;font-size:15px">CREDIT</a>
     </div>
+  </div>
   </div>
 
   <!-- banner -->
@@ -44,7 +48,7 @@ h1,h2{text-wrap:balance}
           <span aria-hidden="true" style="display:flex;align-items:center;gap:2px;font-family:'Dela Gothic One',sans-serif;font-size:clamp(64px,10vw,132px);line-height:1;color:#F6F3FA;text-shadow:0 4px 24px rgba(13,10,20,0.6)">4<svg style="width:0.9em;height:0.98em" viewBox="0 0 48 52"><path d="M5 22C5 4 43 4 43 22Z" fill="#8FE3F2"></path><ellipse cx="17" cy="14" rx="2.2" ry="1.2" transform="rotate(-20 17 14)" fill="#0D0A14"></ellipse><ellipse cx="25" cy="10.5" rx="2.2" ry="1.2" fill="#0D0A14"></ellipse><ellipse cx="32" cy="15" rx="2.2" ry="1.2" transform="rotate(20 32 15)" fill="#0D0A14"></ellipse><path d="M3 25Q8 21 13 25T23 25T33 25T45 25V29H3Z" fill="#C77DE0"></path><rect x="4" y="31" width="40" height="8" rx="4" fill="#F6F3FA"></rect><path d="M5 42H43C43 49 38 50 24 50C10 50 5 49 5 42Z" fill="#8FE3F2"></path></svg>4</span>
           <span aria-hidden="true" style="font-family:'Dela Gothic One',sans-serif;font-size:clamp(20px,3.2vw,40px);letter-spacing:0.18em;color:#F6F3FA">BURGERSHOP</span>
         </h1>
-        <div style="font-size:clamp(15px,1.8vw,20px);font-weight:700;color:#8FE3F2;letter-spacing:0.08em">探していたバーガー、見つかりました。</div>
+        <div style="font-size:clamp(15px,1.8vw,20px);font-weight:700;color:#8FE3F2;letter-spacing:0.08em">探していた<wbr>バーガー、<wbr>見つかりました。</div>
       </div>
     </div>
   </div>
@@ -53,11 +57,11 @@ h1,h2{text-wrap:balance}
   <div style="max-width:1200px;margin:0 auto;padding:72px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
     <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:28px">
       <div style="font-size:14px;letter-spacing:0.3em;color:#C77DE0;font-weight:700">404 — BURGER FOUND</div>
-      <h2 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.25">夜更けの「見つかりません」は、<br>ここで<span style="color:#8FE3F2">見つかる</span>。</h2>
-      <p style="margin:0;font-size:19px;line-height:1.9;color:#D8D0E4;max-width:none">ネオンが光るダイナーで、焼きたてのパティと、<br>チェッカー柄の似合う店員たちがお待ちしています。<br>迷ったらまず、看板バーガーから。</p>
+      <h2 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.25">夜更けの<wbr>「見つかりません」は、<br>ここで<span style="color:#8FE3F2">見つかる</span>。</h2>
+      <p style="margin:0;font-size:19px;line-height:1.9;color:#D8D0E4;max-width:none">ネオンが<wbr>光る<wbr>ダイナーで、<wbr>焼きたての<wbr>パティと、<br>チェッカー<wbr>柄の<wbr>似合う<wbr>店員たちが<wbr>お待ちしています。<br>迷ったらまず、<wbr>看板<wbr>バーガーから。</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a href="menu.html" style="min-height:52px;padding:0 28px;display:flex;align-items:center;text-decoration:none;background:#8FE3F2;color:#0D0A14;border-radius:999px;font-weight:700;font-size:17px">メニューを見る</a>
-        <a href="shop.html" style="min-height:52px;padding:0 28px;display:flex;align-items:center;text-decoration:none;border:2px solid #F6F3FA;color:#F6F3FA;border-radius:999px;font-weight:700;font-size:17px">お店について</a>
+        <a href="menu.html" style="min-height:52px;padding:0 28px;display:flex;align-items:center;text-decoration:none;background:#8FE3F2;color:#0D0A14;border-radius:999px;font-weight:700;font-size:17px">メニューを<wbr>見る</a>
+        <a href="shop.html" style="min-height:52px;padding:0 28px;display:flex;align-items:center;text-decoration:none;border:2px solid #F6F3FA;color:#F6F3FA;border-radius:999px;font-weight:700;font-size:17px">お店<wbr>について</a>
       </div>
     </div>
   </div>
@@ -68,24 +72,24 @@ h1,h2{text-wrap:balance}
   <!-- 3 cards -->
   <div style="max-width:1200px;margin:0 auto;padding:88px 24px 24px;box-sizing:border-box">
     <div style="font-size:14px;letter-spacing:0.3em;color:#C77DE0;font-weight:700;margin-bottom:12px">EXPLORE</div>
-    <h2 style="margin:0 0 40px;font-family:'Dela Gothic One',sans-serif;font-size:40px;font-weight:400">お店のこと、ちょっとだけ。</h2>
+    <h2 style="margin:0 0 40px;font-family:'Dela Gothic One',sans-serif;font-size:40px;font-weight:400">お店のこと、<wbr>ちょっとだけ。</h2>
     <div style="display:flex;flex-wrap:wrap;gap:24px">
       <a href="shop.html" style="flex:1 1 300px;min-width:0;box-sizing:border-box;padding:32px;background:#17121F;border:1px solid #2F2640;border-radius:20px;text-decoration:none;color:#F6F3FA;display:flex;flex-direction:column;gap:14px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:44px;color:#8FE3F2">01</div>
         <div style="font-size:24px;font-weight:700">店舗紹介</div>
-        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">ネオンが光るカウンターと、黒と白のチェッカーフロア。コンセプトと営業時間はこちら。</div>
+        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">ネオンが<wbr>光る<wbr>カウンターと、<wbr>黒と<wbr>白の<wbr>チェッカーフロア。<wbr>コンセプトと<wbr>営業時間はこちら。</div>
         <div style="font-weight:700;color:#8FE3F2">SHOP →</div>
       </a>
       <a href="staff.html" style="flex:1 1 300px;min-width:0;box-sizing:border-box;padding:32px;background:#17121F;border:1px solid #2F2640;border-radius:20px;text-decoration:none;color:#F6F3FA;display:flex;flex-direction:column;gap:14px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:44px;color:#C77DE0">02</div>
         <div style="font-size:24px;font-weight:700">店員紹介</div>
-        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">星の名札とジャケットがトレードマーク。今夜のカウンターに立つ店員をご紹介します。</div>
+        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">星の<wbr>名札と<wbr>ジャケットが<wbr>トレードマーク。<wbr>今夜の<wbr>カウンターに<wbr>立つ<wbr>店員を<wbr>ご紹介します。</div>
         <div style="font-weight:700;color:#C77DE0">STAFF →</div>
       </a>
       <a href="menu.html" style="flex:1 1 300px;min-width:0;box-sizing:border-box;padding:32px;background:#17121F;border:1px solid #2F2640;border-radius:20px;text-decoration:none;color:#F6F3FA;display:flex;flex-direction:column;gap:14px">
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:44px;color:#F6F3FA">03</div>
         <div style="font-size:24px;font-weight:700">メニュー</div>
-        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">看板の「404 ファウンド」をはじめ、バーガー5種とサイド、ドリンクを用意しています。</div>
+        <div style="font-size:16px;line-height:1.8;color:#B9B0C7">看板の<wbr>「404 <wbr>ファウンド」をはじめ、<wbr>バーガー<wbr>5<wbr>種と<wbr>サイド、<wbr>ドリンクを<wbr>用意しています。</div>
         <div style="font-weight:700">MENU →</div>
       </a>
     </div>
@@ -96,15 +100,15 @@ h1,h2{text-wrap:balance}
     <div style="background:#17121F;border-radius:28px;padding:48px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:40px;align-items:center;border:1px solid #2F2640">
       <div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:18px">
         <div style="font-size:14px;letter-spacing:0.3em;color:#8FE3F2;font-weight:700">SIGNATURE</div>
-        <h2 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-size:42px;font-weight:400;line-height:1.2">404 ファウンド</h2>
-        <p style="margin:0;font-size:17px;line-height:1.9;color:#D8D0E4">ダブルパティにチェダーチーズ、シャキシャキのピクルス。ほんのり甘辛いネオンソースが、夜の疲れにやさしく効きます。</p>
+        <h2 style="margin:0;font-family:'Dela Gothic One',sans-serif;font-size:42px;font-weight:400;line-height:1.2">404 <wbr>ファウンド</h2>
+        <p style="margin:0;font-size:17px;line-height:1.9;color:#D8D0E4">ダブルパティに<wbr>チェダーチーズ、<wbr>シャキシャキの<wbr>ピクルス。<wbr>ほんのり<wbr>甘辛い<wbr>ネオンソースが、<wbr>夜の<wbr>疲れにやさしく<wbr>効きます。</p>
         <div style="font-family:'Dela Gothic One',sans-serif;font-size:32px;color:#8FE3F2">¥1,080</div>
       </div>
       <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px">
-        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>403 フォービドゥン</span><span style="color:#B9B0C7">¥1,280</span></div>
-        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>418 アイム・ア・チキン</span><span style="color:#B9B0C7">¥980</span></div>
-        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>200 OK チーズ</span><span style="color:#B9B0C7">¥850</span></div>
-        <a href="menu.html" style="margin-top:8px;min-height:44px;display:flex;align-items:center;font-weight:700;text-decoration:none">すべてのメニュー →</a>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>403 <wbr>フォービドゥン</span><span style="color:#B9B0C7">¥1,280</span></div>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>418 <wbr>アイム・ア・チキン</span><span style="color:#B9B0C7">¥980</span></div>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #2F2640;font-size:17px"><span>200 <wbr>OK <wbr>チーズ</span><span style="color:#B9B0C7">¥850</span></div>
+        <a href="menu.html" style="margin-top:8px;min-height:44px;display:flex;align-items:center;font-weight:700;text-decoration:none">すべての<wbr>メニュー <wbr>→</a>
       </div>
     </div>
   </div>
@@ -113,13 +117,13 @@ h1,h2{text-wrap:balance}
   <div style="max-width:1200px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px">
     <div style="flex:1 1 280px;min-width:0;padding:28px;border:2px solid #8FE3F2;border-radius:20px;box-sizing:border-box">
       <div style="font-size:13px;letter-spacing:0.25em;color:#8FE3F2;font-weight:700;margin-bottom:10px">OPEN</div>
-      <div style="font-size:24px;font-weight:700;line-height:1.5">毎日 25:00 – 27:00</div>
-      <div style="font-size:15px;color:#B9B0C7;margin-top:6px">ラストオーダー 26:30 / 不定休</div>
+      <div style="font-size:24px;font-weight:700;line-height:1.5">毎日 <wbr>25:00 <wbr>– <wbr>27:00</div>
+      <div style="font-size:15px;color:#B9B0C7;margin-top:6px">ラストオーダー <wbr>26:30 <wbr>/ <wbr>不定休</div>
     </div>
     <div style="flex:1 1 280px;min-width:0;padding:28px;border:2px solid #C77DE0;border-radius:20px;box-sizing:border-box">
       <div style="font-size:13px;letter-spacing:0.25em;color:#C77DE0;font-weight:700;margin-bottom:10px">ACCESS</div>
       <div style="font-size:24px;font-weight:700;line-height:1.5">VRChat「Moon Diner」</div>
-      <div style="font-size:15px;color:#B9B0C7;margin-top:6px">※ このお店は実在しません</div>
+      <div style="font-size:15px;color:#B9B0C7;margin-top:6px">※ <wbr>この<wbr>お店は<wbr>実在しません</div>
     </div>
   </div>
 
@@ -127,7 +131,7 @@ h1,h2{text-wrap:balance}
   <div style="height:16px;background:repeating-conic-gradient(#F6F3FA 0% 25%, #0D0A14 0% 50%) 0 0/16px 16px"></div>
   <div style="max-width:1200px;margin:0 auto;padding:20px 24px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:#B9B0C7;font-size:14px">
     <div style="font-family:'Dela Gothic One',sans-serif;color:#F6F3FA;font-size:16px">BURGERSHOP 404</div>
-    <div>© BURGERSHOP 404 — 架空のハンバーガーショップです</div>
+    <div>© <wbr>BURGERSHOP <wbr>404 <wbr>— <wbr>架空の<wbr>ハンバーガーショップです</div>
   </div>
 </div>
 </body>
